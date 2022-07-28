@@ -43,12 +43,23 @@ console.log(evenOrOdd, userNumber, pcNumber);
 // sommare i due numeri
 const sum = userNumber + pcNumber;
 
-// stabilire se la somma dei due numeri è pari o dispari
-
-
-// Dichiariamo chi ha vinto.
+// stabilire chi ha vinto sulla base della somma
+let message = 'Hai perso';
+if (isEven(sum) && evenOrOdd === 'pari') {
+    message = 'Hai vinto';
+} else if (!isEven(sum) && evenOrOdd === 'dispari') {
+    message = 'Hai vinto';
+}
+console.log(message);
 
 function getRandomInt() {
     const num = Math.floor(Math.random() * 5) + 1;
     return num;
+}
+
+function isEven(num) {
+    if (num % 2 === 0) {
+        return true;
+    }
+    return false;
 }
