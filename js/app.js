@@ -34,7 +34,11 @@
 // chiedere all'utente di scegliere pari o dispari
 // chiedere all'utente di inserire un numero da 1 a 5
 const evenOrOdd = prompt('Pari o dispari?');
-const userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+
+let userNumber;
+do {
+    userNumber = parseInt(prompt('Inserisci un numero da 1 a 5'));
+} while (userNumber <= 0 || userNumber > 5);
 
 // generare un numero random da 1 a 5 per il computer
 const pcNumber = getRandomInt();
