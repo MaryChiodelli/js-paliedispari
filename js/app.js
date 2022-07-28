@@ -12,7 +12,14 @@ function isPalindroma(text) {
         revertChars.push(char);
     }
     console.log(chars, revertChars);
+
     // controllare che la parola sia palindroma
+    let isPalindroma = false;
+    if (chars.join() === revertChars.join()) {
+        isPalindroma = true;
+    }
+    
+    return isPalindroma;
 }
 
-console.log(isPalindroma(userWord));
+console.log(isPalindroma(userWord)); 
